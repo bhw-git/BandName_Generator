@@ -2,11 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 
 const app = express();
-<<<<<<< HEAD
 const port = process.env.PORT || 3000;
-=======
-const port = 3000;
->>>>>>> status
 
 //Step 3 - Make the styling show up.
 //Hint 1: CSS files are static files!
@@ -15,31 +11,26 @@ const port = 3000;
 
 //Step 4 - Add a dynamic year to the footer.
 //Hint: Google to find out how to get the current year using JS.
-<<<<<<< HEAD
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   res.render("solution.ejs");
-=======
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
->>>>>>> status
   //Step 1 - Make the get route work and render the index.ejs file.
 });
 
 app.post("/submit", (req, res) => {
-<<<<<<< HEAD
   const randomAdj = adj[Math.floor(Math.random() * adj.length)];
   const randomNoun = noun[Math.floor(Math.random() * noun.length)];
   res.render("solution.ejs", {
     adjective: randomAdj,
     noun: randomNoun,
   });
-=======
->>>>>>> status
   //Step 2 - Make the generate name functionality work
   //Hint: When the "Generate Name" button in index.ejs is clicked, it should hit up this route.
   //Then:
@@ -49,11 +40,7 @@ app.post("/submit", (req, res) => {
   //3. Test to make sure that the random words display in the h1 element in index.ejs
 });
 
-<<<<<<< HEAD
 app.listen(port, '0.0.0.0', () => {
-=======
-app.listen(port, () => {
->>>>>>> status
   console.log(`Listening on port ${port}`);
 });
 
